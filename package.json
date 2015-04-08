@@ -1,0 +1,10 @@
+{
+	"name": "shortenURL",
+	"description": "473 HW7 URL shortener",
+	"dependencies": {
+		"express": "~4.12.2",
+		"redis": "0.8.x",
+		"body-parser": "~1.12.0",
+		"bases": "~0.2.1"
+	}
+}

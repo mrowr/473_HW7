@@ -7,7 +7,7 @@ var express = require("express"),
     http = require("http"),
     app = express(),
     redis = require("redis"), //require the redis module
-    redisClient,
+    redisClient = redis.createClient(), // create a client to connect to Redis
     bodyParser = require("body-parser"),
     bases = require("bases");
 
@@ -17,9 +17,6 @@ var input_url, output_url, base_url, key;
 app.use(express.static(__dirname + "/client"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// create a client to connect to Redis
-redisClient = redis.createClient();
 
 // from ProfAvery's implementations in Ruby and Python
 // initialize next key
